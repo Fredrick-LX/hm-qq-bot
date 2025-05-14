@@ -1,0 +1,10 @@
+import { BotConfig } from "../types";
+
+export const botConfig: BotConfig = {
+    appid: "",
+    secret: "",
+    sandbox: true,
+    logLevel: "info",
+    maxRetry: 10,
+    intents: ["GROUP_AT_MESSAGE_CREATE", "C2C_MESSAGE_CREATE"],
+}; 

@@ -1,0 +1,32 @@
+{
+    "name": "hm-qq-bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "dev": "ts-node src/index.ts",
+        "build": "tsc",
+        "package": "pkg dist/index.js -o bot"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.8.1",
+    "dependencies": {
+        "@types/jsdom": "^21.1.7",
+        "axios": "^1.8.4",
+        "fs": "0.0.1-security",
+        "jsdom": "^26.1.0",
+        "level": "^10.0.0",
+        "pkg": "^5.8.1",
+        "qq-group-bot": "^1.1.0",
+        "ts-loader": "^9.5.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3",
+        "webpack": "^5.99.6",
+        "webpack-cli": "^6.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.1"
+    }
+}
