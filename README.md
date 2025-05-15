@@ -7,14 +7,15 @@
 - 天气查询：支持查询全国主要城市的实时天气和未来预报
 - 每日一句：获取每日一句精美句子
 - 签到功能：群成员每日签到
-- 人品测试：测试今日人品值
+- 随机图片：展示一张随机图片
+- 历史上的今天：查看历史上的今天
 - 更多功能持续开发中...
 
 ## 安装
 
 1. 克隆项目
 ```bash
-git clone https://github.com/Fredrick-LX/hm-qq-bot/hm-qq-bot.git
+git clone https://github.com/Fredrick-LX/hm-qq-bot.git
 cd hm-qq-bot
 ```
 
@@ -50,9 +51,10 @@ pnpm build
 - `/weather <城市>` 或 `/天气 <城市>` - 查询指定城市的天气信息
 - `/daily` 或 `/每日一句` - 获取每日一句精美句子
 - `/sign` 或 `/签到` - 进行每日签到
-- `/rp` 或 `/随机图片` - 随机涩图
+- `/rp` 或 `/随机图片` - 随机图片
 - `/help` 或 `/帮助` - 显示帮助信息
 - `/zvv` 或 `/维维` - 随机zvv
+- `/history` 或 `/史今` - 查看历史上的今天
 
 ## 技术栈
 
@@ -60,6 +62,18 @@ pnpm build
 - Node.js
 - qq-group-bot
 - Axios
+- 其他依赖详见 package.json
+
+## 项目结构
+
+```
+src/
+├── commands/     # 命令处理模块
+├── config/       # 配置文件
+├── services/     # 服务层
+├── types/        # 类型定义
+└── index.ts      # 入口文件
+```
 
 ## 贡献
 

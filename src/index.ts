@@ -6,29 +6,36 @@ const bot = new Bot(botConfig);
 
 bot.start().then(() => {
     console.log("机器人启动成功！");
-    
+
     bot.on("message", async (message) => {
         const content = message.toJSON().content.trim();
         const [command, ...args] = content.split(" ");
-        
+
         if (!command.startsWith("/")) {
             return;
         }
-        
+
         const cmdName = command.slice(1);
-        const cmd = commands.find(c => 
+        const cmd = commands.find(c =>
             c.name === cmdName || c.aliases.includes(cmdName)
         );
-        
+
         if (cmd) {
             try {
                 await cmd.execute(message, args);
             } catch (error) {
                 console.error(`执行命令 ${cmdName} 失败:`, error);
-                await message.reply({
-                    type: "text",
-                    text: "命令执行失败，请稍后再试！",
-                });
+                if (cmd.name === "rp") {
+                    await message.reply({
+                        type: "text",
+                        text: "请求速度过快，请稍后再试！",
+                    });
+                } else {
+                    await message.reply({
+                        type: "text",
+                        text: "命令执行失败，请稍后再试！",
+                    });
+                }
             }
         } else {
             await message.reply({

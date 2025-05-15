@@ -9,7 +9,7 @@
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
         "rootDirs": ["./src/*","./node_modules/*"],
-        "outDir": "./dist",
+        "outDir": "hm-qq-bot",
         "baseUrl": ".",
         "paths": {
             "src/*": ["src/*"]

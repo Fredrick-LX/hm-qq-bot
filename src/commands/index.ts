@@ -5,6 +5,7 @@ import { signInCommand } from "./signIn";
 import { rpCommand } from "./rp";
 import { weatherCommand } from "./weather";
 import { dailyCommand } from "./daily";
+import { historyCommand } from "./history";
 
 export const commands: Command[] = [
     helpCommand,
@@ -13,4 +14,5 @@ export const commands: Command[] = [
     rpCommand,
     weatherCommand,
     dailyCommand,
+    historyCommand,
 ]; 
