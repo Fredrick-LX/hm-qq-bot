@@ -2,7 +2,7 @@ import { Command } from "../types";
 import { signIn } from "../services/signIn";
 
 export const signInCommand: Command = {
-    name: "qd",
+    name: "sign",
     aliases: ["签到"],
     description: "每日签到",
     execute: async (message) => {
