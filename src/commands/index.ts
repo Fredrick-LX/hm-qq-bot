@@ -6,6 +6,7 @@ import { rpCommand } from "./rp";
 import { weatherCommand } from "./weather";
 import { dailyCommand } from "./daily";
 import { historyCommand } from "./history";
+import { chatCommand } from "./chat";
 
 export const commands: Command[] = [
     helpCommand,
@@ -15,4 +16,5 @@ export const commands: Command[] = [
     weatherCommand,
     dailyCommand,
     historyCommand,
+    chatCommand,
 ]; 
